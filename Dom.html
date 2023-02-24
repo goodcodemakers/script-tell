@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM.html</title>
+    <style>
+      .container {
+        border: 1px solid #ccc;
+        padding: 1rem;
+        margin: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="title">title</h1>
+    <div class="container">
+      <p>영역 1</p>
+    </div>
+    <div class="container c2">
+      <p>영역 2</p>
+      <p>영역 3</p>
+      <p>영역 4</p>
+      <p>영역 5</p>
+      <p>영역 6</p>
+    </div>
+
+    <script>
+      const titleId = document.getElementById("title");
+      // console.log(titleId);
+
+      // class명으로 가져오기
+      const containers = document.getElementsByClassName("container");
+      // console.log(containers);
+      containers[1].style.backgroundColor = "pink"; // 배열
+
+      // CSS 룰
+      const titleSelector = document.querySelector("#title");
+      console.log(titleSelector);
+
+      const para = document.querySelector("p");
+      console.log(para.innerText); // 첫번째 p
+
+      // 여러개 선택
+      const paras = document.querySelectorAll(".c2 p");
+      console.log(paras);
+      paras[0].style.color = "blue";
+
+      // 모든 p태그 색칠하기
+      for (let i = 0; i < paras.length; i++) {
+        paras[i].style.color = "blue";
+      }
+    </script>
+  </body>
+</html>

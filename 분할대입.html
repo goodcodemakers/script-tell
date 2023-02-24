@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>분할대입</title>
+  </head>
+  <body>
+    <script>
+      //   const pokemon = {
+      //     name: "피카츄",
+      //     skill: "전기",
+      //   };
+      /* 포켓몬 객체안에있는 네임 속성을 변수로 가져옴 */
+      //   let name = pokemon.name;
+      //   let skill = pokemon.skill;
+      //   console.log(name + "의 속성은" + skill + "입니다");
+
+      //분할 대입으로 가져오기
+      //   let { name, skill } = pokemon;
+      //   console.log(name, skill);
+
+      //배열 가져오기(기존 방식)
+      //   let arr = [10, 20, 30];
+      //   let a = arr[0];
+      //   let b = arr[1];
+      //   let c = arr[2];
+      //   let rest;
+      //   [a, b, ...rest] = arr;
+      //   console.log(a, b, rest);
+
+      //   let g = 10;
+      //   let arr2 = [g, 2 * g, 3 * g, 4 * g];
+      //   console.log(arr2);
+
+      const profile = {
+        name: "홍길동",
+        age: 40,
+        address: "안양",
+      };
+      let { name, age, address } = profile;
+      console.log(`내 이름은 ${name} 이고 나이는 ${age}살입니다. 
+      현재 ${address}살고 있습니다.`);
+    </script>
+
+    <script>
+      //함수의 기본 파라미터값
+      const sayhello = (name = "김아무개") => {
+        console.log(`${name}님 안녕하세요?`);
+      };
+      sayhello("손홍민");
+      sayhello();
+
+      //계산을 하는 함수
+      const doCalc = (a = 0, b = 0) => {
+        console.log(a + b);
+      };
+      doCalc(1);
+
+      //옛날 방식
+      const doCalc2 = (a, b) => {
+        if (b == undefined) {
+          b = 0;
+        }
+        if (a == undefined) {
+          a = 0;
+        }
+        console.log(a + b);
+      };
+      doCalc2(1);
+    </script>
+  </body>
+</html>

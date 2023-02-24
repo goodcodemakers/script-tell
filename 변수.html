@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>변수</title>
+  </head>
+  <body>
+    <script>
+      // use strict 엄격모드
+      var a = 1;
+      var a = "hello"; //변수 중복 선언 가능
+      console.log(a);
+      let b = 1;
+      //let b = "world" //변수 중복 선언 불가능
+      const pi = 3.141592;
+      // pi = 10; 에러
+      const foods = ["김밥", "만두", "순대"];
+      console.log(foods);
+      foods.push("라면");
+      console.log(foods);
+
+      //foods = 1 ; // const 자료형을 바꾸면 안됨
+
+      //자료형을 맘대로 변경하려면
+      let animals = ["개", "고양이", "새"];
+      console.log(animals);
+      animals = 1;
+      console.log(animals);
+
+      //객체
+      const car = {
+        name: "소나타",
+        color: "흰색",
+        won: 300000000,
+      };
+      let car2 = {
+        name: "아우디 a6",
+        color: "쥐색",
+        won: 3000000,
+      };
+      console.log(car);
+      console.log(car2);
+
+      console.log(car.name);
+      car.name = "g80";
+      console.log(car);
+      car2.name = "마트쇼핑카트";
+      console.log(car2);
+      // console.log(car.name + car2.name);
+      let carname = car.name + car2.name;
+      console.log(carname);
+      let won = car.won + car2.won;
+      console.log(won);
+      car["apple"] = "none";
+      console.log(car.apple);
+    </script>
+  </body>
+</html>
